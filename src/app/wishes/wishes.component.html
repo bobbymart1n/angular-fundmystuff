@@ -1,7 +1,7 @@
 <div class="item-container">
   <h2>Items to fund</h2>
   <div class="row">
-    <div *ngFor="let funding of fundings | async"  class="card card-default col">
+    <div *ngFor="let funding of fundings | async"  class="card card-default col" (click)="goToItemPage(funding)">
       <div class="card-body">
         <div class="item-image">
           <img src="{{funding.img}}" alt="{{funding.img}}">

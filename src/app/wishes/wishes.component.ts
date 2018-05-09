@@ -10,9 +10,13 @@ import { ItemService } from './../services/item.service';
   providers: [ItemService]
 })
 export class WishesComponent implements OnInit {
-  fundings: FirebaseListObservable<any[]>;
+  fundings;
 
   constructor(private router: Router, private itemService: ItemService) { }
+
+  goToItemPage(clickedItem) {
+    this.router.navigate(['fundings', clickedItem.$key])
+  }
 
   ngOnInit() {
     this.fundings = this.itemService.getFundings();

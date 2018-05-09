@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { WishesComponent } from './wishes/wishes.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,7 +26,9 @@ export const firebaseConfig = {
     HomeComponent,
     WishesComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    ItemDetailsComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

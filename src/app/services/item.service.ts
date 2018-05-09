@@ -5,6 +5,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 
 @Injectable()
 export class ItemService {
+  infoId: number;
   fundings: FirebaseListObservable<any[]>;
   constructor(private database: AngularFireDatabase) {
     this.fundings = database.list('fundings');
@@ -12,6 +13,10 @@ export class ItemService {
 
   getFundings() {
     return this.fundings;
+  }
+
+  getItemById(infoId: number){
+    return this.database.object('fundings/' + infoId);
   }
 
 }
