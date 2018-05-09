@@ -1,0 +1,20 @@
+{  "fundings": [{
+    "title":  "Kids fake microphone",
+    "description": "Its some of my stuff",
+    "fullStory": "I have things that I need funded and you should fund it! You're a cool cat that has a lot of money right?",
+    "img": "https://www.amazon.com/Magic-Mic-Colors-Vary-Individually/dp/B00009IM74",
+    "id": 1
+    }, {
+    "title": "Cardboard washing machine",
+    "description": "Its cardboard and a machine that washes",
+    "fullStory": "You read the title correctly. I want that shit. You should fund it",
+    "img": "https://craft.ideas2live4.com/2016/08/02/cardboard-washing-machine-for-kids/",
+    "id": 2
+      }, {
+    "title": "CRT Monitor",
+    "description": "Take me back to my glory days of CS 1.6 with this CRT Monitor",
+    "fullStory": "I wanna make legit headshots again. Fund this CRT monitor so I can be the best CS1.6 player around.",
+    "img": "http://jestineyong.com/about-crt-monitor-grounding/",
+    "id": 3
+  }]
+}

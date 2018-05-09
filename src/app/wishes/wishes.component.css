@@ -1,0 +1,9 @@
+.item-container {
+  padding-top: 90px;
+}
+.item-image {
+  max-width: 400px;
+}
+.item-image img {
+  width: 100%;
+}
