@@ -11,13 +11,13 @@ import { Location } from '@angular/common';
   providers: [ItemService]
 })
 export class ItemDetailsComponent implements OnInit {
-  infoId: number;
-  infoToDisplay: Info;
+  infoId: string;
+  infoToDisplay;
   constructor(private itemService: ItemService, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.infoId = parseInt(urlParameters['id']);
+      this.infoId = urlParameters['id'];
     });
     this.infoToDisplay = this.itemService.getItemById(this.infoId);
   }

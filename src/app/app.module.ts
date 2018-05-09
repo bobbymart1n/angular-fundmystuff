@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { routing } from './app.routing';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
@@ -12,6 +13,7 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { UserComponent } from './user/user.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -28,11 +30,13 @@ export const firebaseConfig = {
     NavComponent,
     FooterComponent,
     ItemDetailsComponent,
-    SidebarComponent
+    SidebarComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     routing,
+    NgbModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
   ],

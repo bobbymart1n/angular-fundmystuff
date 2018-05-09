@@ -1,0 +1,33 @@
+<h3>Add New Item to be Funded</h3>
+<div>
+  <div>
+    <label>Item Image:</label>
+    <br>
+    <input #newImage>
+  </div>
+
+  <div>
+    <label>Item Title:</label>
+    <br>
+    <input #newTitle>
+  </div>
+
+  <div>
+    <label>Item Description:</label>
+    <br>
+    <textarea #newDescription></textarea>
+  </div>
+
+  <div>
+    <label>Item Story:</label>
+    <br>
+    <textarea #newFullStory></textarea>
+  </div>
+
+  <div>
+    <label>Item Fund Goal:</label>
+    <br>
+    <input #newGoal>
+  </div>
+</div>
+<button (click)="submitForm(newImage.value, newTitle.value, newDescription.value, newFullStory.value, newGoal.value); newImage.value=''; newTitle.value=''; newDescription.value=''; newFullStory.value=''; newGoal.value=''">Add</button>

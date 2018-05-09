@@ -15,7 +15,11 @@ export class ItemService {
     return this.fundings;
   }
 
-  getItemById(infoId: number){
+  addItem(newItem: Info) {
+    this.fundings.push(newItem);
+  }
+
+  getItemById(infoId: string){
     return this.database.object('fundings/' + infoId);
   }
 
