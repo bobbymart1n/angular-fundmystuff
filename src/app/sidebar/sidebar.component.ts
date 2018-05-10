@@ -14,7 +14,6 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 export class SidebarComponent implements OnInit {
   infoId: string;
   donationClick = null;
-  donations: number = 0;
   infoToDisplay;
   closeResult: string;
   constructor(private itemService: ItemService, private route: ActivatedRoute, private location: Location, private modalService: NgbModal) { }
@@ -23,7 +22,9 @@ export class SidebarComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.infoId = urlParameters['id'];
     });
-    this.infoToDisplay = this.itemService.getItemById(this.infoId);
+    this.itemService.getItemById(this.infoId).subscribe(dataLastEmittedFromObserver => {
+      this.infoToDisplay = dataLastEmittedFromObserver;
+    })
   }
 
   donationClicked(clickedDonation) {
@@ -49,9 +50,13 @@ export class SidebarComponent implements OnInit {
     }
   }
 
-  submitDonation(newDonation){
-    this.donations += parseInt(newDonation);
+  submitDonation(itemId, newDonation) {
+    this.itemService.addDonation(itemId, parseInt(newDonation));
   }
+
+  // submitDonation(newDonation){
+  //   this.donations += parseInt(newDonation);
+  // }
   progress() {
 
   }

@@ -18,7 +18,10 @@ export class ItemService {
   addItem(newItem: Info) {
     this.fundings.push(newItem);
   }
-
+  addDonation(itemId, donation) {
+    let itemInFirebase = this.getItemById(itemId.$key);
+    itemInFirebase.update({donations: itemId.donations += parseInt(donation)});
+  }
   getItemById(infoId: string){
     return this.database.object('fundings/' + infoId);
   }

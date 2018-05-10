@@ -2,7 +2,7 @@
   <div class="card-body">
     <div class="fund-bar mb-4">
       <div class="fund-total">
-        <h3><span class="current-fund">${{donations}}</span> of $<span class="total-fund-amount">{{(infoToDisplay | async)?.goal}}</span></h3>
+        <h3><span class="current-fund">$ {{infoToDisplay?.donations}}</span> of $<span class="total-fund-amount">{{infoToDisplay?.goal}}</span></h3>
       </div>
       <div class="progress">
         <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
@@ -34,7 +34,7 @@
   </div>
   <div class="modal-body">
     <input type="number" #newDonation>
-    <button type="button" (click)="submitDonation(newDonation.value); newDonation.value=''">Donate!</button>
+    <button type="button" (click)="submitDonation(infoToDisplay, newDonation.value); newDonation.value=''">Donate!</button>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
