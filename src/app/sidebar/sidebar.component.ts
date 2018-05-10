@@ -35,7 +35,6 @@ export class SidebarComponent implements OnInit {
 
   donationClicked(clickedDonation) {
     this.donationClick = true;
-    console.log(this.donationClick);
   }
 
   open(content) {
@@ -60,11 +59,5 @@ export class SidebarComponent implements OnInit {
     this.itemService.addDonation(itemId, parseInt(newDonation));
   }
 
-  // submitDonation(newDonation){
-  //   this.donations += parseInt(newDonation);
-  // }
-  progress() {
-
-  }
 
 }
