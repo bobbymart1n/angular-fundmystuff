@@ -27,6 +27,12 @@ export class SidebarComponent implements OnInit {
     })
   }
 
+  currentProgress(progress) {
+    progress = this.infoToDisplay.donations
+    let goal = this.infoToDisplay.goal
+    return progress / goal * 100 + "%"
+  }
+
   donationClicked(clickedDonation) {
     this.donationClick = true;
     console.log(this.donationClick);

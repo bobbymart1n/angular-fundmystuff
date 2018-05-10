@@ -15,7 +15,7 @@ export class UserComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(image: string, title: string, description: string, fullStory: string, goal: string, donations: number) {
+  submitForm(image: string, title: string, description: string, fullStory: string, goal: number, donations: number) {
     let newItem: Info = new Info(image, title, description, fullStory, goal, donations);
     this.itemService.addItem(newItem);
     console.log(newItem);

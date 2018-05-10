@@ -2,10 +2,10 @@
   <div class="card-body">
     <div class="fund-bar mb-4">
       <div class="fund-total">
-        <h3><span class="current-fund">$ {{infoToDisplay?.donations}}</span> of $<span class="total-fund-amount">{{infoToDisplay?.goal}}</span></h3>
+        <h3><span class="current-fund">${{infoToDisplay?.donations}}</span> of $<span class="total-fund-amount">{{infoToDisplay?.goal}}</span></h3>
       </div>
       <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar" [style.width]="currentProgress(progress)" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
     </div>
     <div class="fund-button">
@@ -15,7 +15,7 @@
 </div>
 <div class="author-section">
   <div class="user-image">
-    <img src="" alt="">
+    <img src="#" alt="">
   </div>
   <div class="user-info">
     <p class="mb-0">Ants Johnson</p>
